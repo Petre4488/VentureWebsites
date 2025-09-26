@@ -114,34 +114,35 @@ export const DATA = {
     },
     education: [
       {
-        title: "Pachete",
-        date: "Launch / Grow / Scale",
-        icon: "mdi:palette",
-        description:
-          "Launch (24h) — One-page / 3 secțiuni, template-based, de la €300. Grow (24–48h) — 3–5 pagini, asistență copy, SEO de bază, de la €400. Scale — proiecte custom, blog, integrări, preț la cerere.",
-      },
-      {
-        title: "Mentenanță",
-        date: "Care Plans",
-        icon: "mdi:school",
-        description:
-          "Care Basic €49/lună: hosting + backup + actualizări + mici modificări + uptime ping. Care Pro €149/lună: + prioritizare, suport rapid și raport lunar (SEO/traffic).",
-      },
-      {
-        title: "Garanție",
-        date: "SLA",
-        icon: "mdi:school-outline",
-        description:
-          "Dacă ratăm livrarea draftului în 24h (după primirea completă a asset-urilor/brand book-ului), aplicăm automat o reducere de −20%.",
-      },
+  title: "Launch",
+  date: "1 pagină • 24h",
+  icon: "mdi:flash",
+  description:
+    "Pachetul de bază pentru un start rapid: site de prezentare (one-page sau până la 3 secțiuni) construit în maximum 24 de ore. Include design modern în Framer, optimizare pentru mobil, integrare formular de contact și date de bază pentru SEO. Preț de la €300.",
+},
+{
+  title: "Grow",
+  date: "3–5 pagini • 24–48h",
+  icon: "mdi:trending-up",
+  description:
+    "Ideal pentru afaceri în creștere: website de 3–5 pagini (servicii, despre, echipă, contact, blog de bază). Include suport la copywriting, structură SEO inițială, integrare chat/booking online și conectare la Google Analytics. Preț de la €400.",
+},
+{
+  title: "Scale",
+  date: "Custom • termen variabil",
+  icon: "mdi:rocket-launch",
+  description:
+    "Pachet complet pentru proiecte complexe: site-uri cu blog, integrări CRM, plăți online, multi-language, sau funcționalități avansate. Livrarea și prețul sunt stabilite în funcție de cerințe. Recomandat pentru clinici, academii, platforme educaționale și afaceri care au nevoie de scalabilitate.",
+},
+
     ],
     experience: [
       {
-        title: "Flow 24h",
+        title: "Garantie & Flow",
         date: "Brief → Depozit → Draft 24h → Editări → Go‑Live",
         icon: "mdi:briefcase",
         description:
-          "3 runde de editări incluse (fiecare poate ajusta termenul cu ±1 zi). Conținut necesar: brand book (logo, culori, fonturi), poze, texte/servicii, date contact și 1–2 site-uri de referință.",
+          "Dacă ratăm livrarea draftului în 24h (după primirea completă a asset-urilor/brand book-ului), aplicăm automat o reducere de −20%. 3 runde de editări incluse (fiecare poate ajusta termenul cu ±1 zi). Conținut necesar: brand book (logo, culori, fonturi), poze, texte/servicii, date contact și 1–2 site-uri de referință.",
       },
       {
         title: "Stack & Integrări",
@@ -462,14 +463,14 @@ export const DATA = {
     },
   },
   morphingTexts: {
-    about: ["Rapid", "Framer-first", "Orientat pe conversie"] as const,
+    about: ["Rapid", "SEO", "Orientat pe conversie"] as const,
     projects: ["Edu", "Sănătate", "Automatizări", "IMM"] as const,
     contact: ["Programează", "Construim", "Lansăm"] as const,
   },
   navigation: [
     { name: "Acasă", href: "/", icon: "lucide:home" },
     { name: "Despre", href: "/about", icon: "lucide:user" },
-    { name: "Proiecte", href: "/projects", icon: "lucide:folder-code" },
+    // { name: "Proiecte", href: "/projects", icon: "lucide:folder-code" },
     { name: "Contact", href: "/contact", icon: "lucide:send" },
   ],
   footer: {
