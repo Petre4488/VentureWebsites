@@ -81,18 +81,26 @@ function HoleBackground({
   const setDiscs = React.useCallback(() => {
     const { width, height } = stateRef.current.rect;
 
+    const baseDimension = Math.min(width, height);
+    const baseDiameter = baseDimension * 1.5;
+    const baseRadius = baseDiameter / 2;
+
     stateRef.current.discs = [];
     stateRef.current.startDisc = {
       x: width * 0.5,
       y: height * 0.45,
-      w: width * 0.75,
-      h: height * 0.7,
+      w: baseRadius,
+      h: baseRadius,
     };
     stateRef.current.endDisc = {
       x: width * 0.5,
       y: height * 0.95,
       w: 0,
       h: 0,
+    };
+    stateRef.current.baseDisc = {
+      diameter: baseDiameter,
+      radius: baseRadius,
     };
     let prevBottom = height;
 
@@ -113,8 +121,11 @@ function HoleBackground({
     const clipPath = new Path2D();
     const disc = stateRef.current.clip.disc;
 
-    clipPath.ellipse(disc.x, disc.y, disc.w, disc.h, 0, 0, Math.PI * 2);
-    clipPath.rect(disc.x - disc.w, 0, disc.w * 2, disc.y);
+    const radius = disc.w;
+    const diameter = radius * 2;
+
+    clipPath.ellipse(disc.x, disc.y, radius, radius, 0, 0, Math.PI * 2);
+    clipPath.rect(disc.x - radius, 0, diameter, disc.y);
     stateRef.current.clip.path = clipPath;
   }, [numberOfDiscs, tweenDisc]);
 
@@ -210,10 +221,13 @@ function HoleBackground({
     stateRef.current.particles = [];
     const disc = stateRef.current.clip.disc;
 
+    const radius = disc.w;
+    const diameter = radius * 2;
+
     stateRef.current.particleArea = {
-      sw: disc.w * 0.5,
-      ew: disc.w * 2,
-      h: height * 0.85,
+      sw: diameter * 0.25,
+      ew: diameter,
+      h: Math.max(height * 0.85, diameter),
     };
     stateRef.current.particleArea.sx =
       (width - stateRef.current.particleArea.sw) / 2;
