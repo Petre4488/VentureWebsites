@@ -105,7 +105,7 @@ export const DATA = {
       name: "Venturely",
       title: "Studio Web Framer — România",
       image:
-        "https://res.cloudinary.com/devq06psf/image/upload/v1750626923/chic_soba_bkhd8o.png",
+        "https://i.imgur.com/1gONLQr.png",
       description: [
         "Construim site‑uri pentru afaceri care arată premium, se încarcă rapid și convertesc — de obicei în 24 de ore după ce primim brand book-ul.",
         "Abordarea noastră îmbină tehnicul cu esteticul: simplificăm ce e complicat și livrăm experiențe clare. Preferăm un stack modern (Framer, React, TypeScript, Tailwind).",
